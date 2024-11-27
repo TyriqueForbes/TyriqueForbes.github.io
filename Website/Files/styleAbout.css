@@ -1,0 +1,54 @@
+body {
+    background-color: black;
+}
+
+#TopBar {
+    display: flex;
+    gap: 4vmin;
+    position: absolute;
+
+}
+
+#TopBar > #Portfolio{
+    color: white;
+    font: Verdana;
+    text-decoration: underline;
+    object-position: 100% 100%;
+    cursor: pointer;
+}
+#TopBar > #Contact{
+    color: white;
+    font: Verdana;
+    text-decoration: underline;
+    top: 100%;
+    left: 50%;
+    cursor: pointer;
+}
+
+#links {
+    display: block;
+    top: 10%;
+    position: absolute;
+}
+
+#linkdin {
+    color: rgb(0, 238, 255);
+    display: block;
+    font-size: large;
+    font: Verdana;
+    cursor: pointer;
+}
+#artstation {
+    color: blue;
+    display: block;
+    font-size: large;
+    font: Verdana;
+    cursor: pointer;
+}
+#email {
+    color: white;
+    display: block;
+    font-size: large;
+    font: Verdana;
+    cursor: pointer;
+}
