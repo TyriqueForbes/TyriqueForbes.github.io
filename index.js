@@ -1,7 +1,7 @@
 const track = document.getElementById("image-track");
 
 const container = document.getElementById("enlargedImageContainer");
-const numEntries = 7.0;
+const numEntries = 6.0;
 
 let firstEntry = false;
 
