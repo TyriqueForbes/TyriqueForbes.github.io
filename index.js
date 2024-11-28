@@ -1,5 +1,6 @@
 const track = document.getElementById("image-track");
 
+const container = document.getElementById("enlargedImageContainer");
 const numEntries = 7.0;
 
 let firstEntry = false;
@@ -21,16 +22,15 @@ function expandImage(image)
     img.src = image.src;
     img.id = image.id;
     img.draggable = false;
-    img.style.position = "center";
-    img.style.width = "100vh";
-    img.style.height = "auto";
+    img.style.maxWidth = "100%";
+    img.style.maxHeight = "100%";
     img.style.objectFit = "cover";
     img.style.userSelect = "none";
     const infoPage = ""+image.dataset.linkedto+"";
     backimg = img;
     backimg.addEventListener('click', () => {loadInfoPage(infoPage)});
     //track.insertAdjacentElement("afterend", backimg);
-    document.body.appendChild(backimg);
+    container.appendChild(backimg);
     console.log("expanded")
     //track.style.transform = "scale(1.5)";
     image.style.width = "100vh";
@@ -83,7 +83,7 @@ function resetTrack()
 function resetBackImage(image)
 {
     if(backimg === null)return;
-    document.body.removeChild(backimg);
+    container.removeChild(backimg);
     backimg = null;
 }
 
@@ -140,3 +140,4 @@ window.ontouchend = e => handleOnUp(e.touches[0]);
 window.onmousemove = e => handleOnMove(e);
 
 window.ontouchmove = e => handleOnMove(e.touches[0]);
+
