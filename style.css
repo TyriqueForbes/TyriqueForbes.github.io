@@ -36,7 +36,6 @@ body {
     top: 50%;
     transform: translate(0%, -50%);
     user-select: none;
-    cursor: pointer;
 }
 
 #image-track > .image {
@@ -44,7 +43,6 @@ body {
     height: 30vmax;
     object-fit: cover;
     object-position: 100% 50%;
-    cursor: pointer;
 }
 
 #enlargedImageContainer {
